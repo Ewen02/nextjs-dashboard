@@ -1,0 +1,3 @@
+{
+  "buildCommand": "pnpm install && npx prisma generate && pnpm run build"
+}
