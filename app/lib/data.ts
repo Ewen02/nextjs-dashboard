@@ -1,6 +1,6 @@
 import { sql } from "@vercel/postgres";
 import {
-  CustomerField,
+  FormattedCustomersTable,
   CustomersTableType,
   InvoiceForm,
   InvoicesTable,
@@ -160,7 +160,7 @@ export async function fetchInvoiceById(id: string) {
 
 export async function fetchCustomers() {
   try {
-    const data = await sql<CustomerField>`
+    const data = await sql<FormattedCustomersTable[]>`
       SELECT
         id,
         name
